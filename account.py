@@ -9,24 +9,24 @@ from scorekeepr import *
 
 class AccountPage(ScoreKeeper):
 	def get(self):
-		template_values = self.default_template_values()
-		
+		template_values = self.default_template_values('account')
+
 		user = users.get_current_user()
 		account = Account.gql("WHERE email = :email", email = user.email()).get()
 		if not account:
 			account = Account(email = user.email(), name = user.nickname())
 			account.put()
-		
+
 		template_values['account'] = account
 		self.render_default_template('account', 'edit', template_values)
-		
+
 	def post(self):
 		user = users.get_current_user()
-		
+
 		account = Account.gql("WHERE email = :email", email = user.email()).get()
 		account.name = self.request.get('name')
 		account.put()
-		
+
 		self.redirect('/account')
 
 def main():

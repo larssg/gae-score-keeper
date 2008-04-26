@@ -42,6 +42,59 @@ form {
 	text-decoration: none;
 }
 
+#hd #menu {
+	background-color: #77BBDD;
+}
+
+#hd #menu ul {
+  display: block;
+  margin: 0;
+  padding: 21px;
+  padding-top: 10px;
+  padding-bottom: 0;
+  list-style-type: none;
+  line-height: normal;
+  height: 26px;
+}
+
+#hd #menu ul li {
+	display: inline;
+	float: left;
+	background: url('../images/tab_right.gif') no-repeat right top;
+	margin-right: 4px;
+}
+
+#hd #menu ul li:hover {
+	background-image: url('../images/tab_active_right.gif');
+}
+
+#hd #menu ul li a {
+	text-decoration: none;
+	background-color: #3399CC;
+	border-bottom: none;
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: bold;
+	display: block;
+	float: left;
+	background: url('../images/tab_left.gif') no-repeat left top;
+	padding: 5px 15px; 
+}
+
+#hd #menu ul li a:hover {
+	background-image: url('../images/tab_active_left.gif');
+	color: #7C7C7C;
+}
+
+#hd #menu ul li.current {
+	background-image: url('../images/tab_active_right.gif');
+}
+
+#hd #menu ul li.current a {
+	background-image: url('../images/tab_active_left.gif');
+	color: #7C7C7C;
+}
+
 #bd #recent_matches .scores {
 	text-align: center;
 }

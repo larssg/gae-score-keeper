@@ -7,6 +7,7 @@
         <th class="scores">Scores</th>
         <th>Team 2</th>
         <th>Winner</th>
+        <th>Created</th>
       </tr>
       {% for match in matches %}
         <tr>
@@ -14,6 +15,7 @@
           <td class="scores">{{ match.score1 }} - {{ match.score2 }}</td>
           <td>{{ match.player2 }}</td>
           <td>{{ match.winner }}</td>
+          <td>{{ match.creator.nickname }} at {{ match.played_at }}</td>
         </tr>
       {% endfor %}
     </table>

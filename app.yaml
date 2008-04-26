@@ -17,6 +17,9 @@ handlers:
 - url: /javascript
   static_dir: static/javascript
 
+- url: /matches
+  script: matches.py
+
 - url: /account
   script: account.py
 
