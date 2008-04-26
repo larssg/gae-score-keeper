@@ -5,12 +5,11 @@
     {% block title %}
     <title>Score Keeper</title>
     {% endblock %}
-    <link href="/css/reset.css" type="text/css" rel="Stylesheet" />
-    <link href="/css/typography.css" type="text/css" rel="Stylesheet" />
-    <link href="/css/grid.css" type="text/css" rel="Stylesheet" />
-    <link href="/css/forms.css" type="text/css" rel="Stylesheet" />
+    <script type="text/javascript" src="/javascripts/jquery-1.2.3.min.js"></script>
+    <script type="text/javascript" src="/javascripts/application.js"></script>
+    <link href="/css/blueprint.css" type="text/css" rel="Stylesheet" />
     <link href="/css/screen.css" type="text/css" rel="Stylesheet" />
-    {% block css %}
+    {% block head %}
     {% endblock %}
   </head>
   <body>
@@ -36,6 +35,9 @@
         {% block header %}
         {% endblock %}
         <div id="menu">
+          <div id="new_game_toggle">
+            Add match
+          </div>
           <ul>
             <li{% ifequal action 'dashboard' %} class="current"{% endifequal %}><a href="/">Dashboard</a></li>
             <li{% ifequal action 'matches' %} class="current"{% endifequal %}><a href="/matches">Matches</a></li>
@@ -46,10 +48,10 @@
         {% block maincontent %}
           <div class="{{mainContentClass}}">
             {% if logged_in %}
-              <div id="new_game">
+              <div id="new_game" style="display: none;">
                 <form method="post" action="/matches">
                   <label for="player1">Player:</label> <input type="text" name="player1" class="player" value="{{ email }}" />
-                  <label for="score1">Score:</label> <input type="text" name="score1" class="score" /><br />
+                  <label for="score1">Score:</label> <input type="text" name="score1" class="score" id="new_game_score1" /><br />
                   <label for="player2">Player:</label> <input type="text" name="player2" class="player" />
                   <label for="score2">Score:</label> <input type="text" name="score2" class="score" />
                   <input type="submit" value="Save game" />

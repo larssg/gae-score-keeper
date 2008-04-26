@@ -14,8 +14,8 @@ handlers:
 - url: /css
   static_dir: static/css
 
-- url: /javascript
-  static_dir: static/javascript
+- url: /javascripts
+  static_dir: static/javascripts
 
 - url: /matches
   script: matches.py
