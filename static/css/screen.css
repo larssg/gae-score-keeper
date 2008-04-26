@@ -143,6 +143,7 @@ form {
 	padding-left: 20px;
 	padding-bottom: 7px;
 	background-color: #EEEEEE;
+	border-bottom: 1px solid #CCCCCC;
 }
 
 #new_game input {
