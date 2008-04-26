@@ -1,0 +1,99 @@
+body {
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+#hd {
+	background-color: #3399CC;
+	background-image: url('../images/header_right.gif');
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+#hd #logo {
+	margin: 0;
+	padding: 21px;
+	padding-top: 14px;
+	padding-bottom: 8px;
+	background-image: url('../images/header_left.gif');
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+#hd #logo a {
+	margin: 0;
+}
+
+#hd #logo img {
+	margin: 0;
+}
+
+#bd #recent_matches .scores {
+	text-align: center;
+}
+
+.list {
+  margin-top: 1.5em;
+}
+
+.list table {
+	width: 100%;
+}
+
+.list table th {
+	border: 0;
+	border-bottom: 1px solid #3399CC;
+	background-color: #77BBDD;
+	padding: 3px;
+	color: #FFFFFF;
+}
+
+.list table td {
+	border: 0;
+	padding: 3px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.list table td img {
+	margin: 0;
+	padding: 0;
+	vertical-align: text-bottom;
+}
+
+.list table tr.even td {
+	background-color: #EEEEEE;
+}
+
+.list .notes {
+	font-size: 11px;
+	color: #999999;
+	font-weight: normal;
+}
+
+#new_game {
+	padding: 10px;
+	padding-left: 20px;
+	padding-bottom: 7px;
+	background-color: #EEEEEE;
+}
+
+#new_game input {
+	margin-bottom: 3px;
+}
+
+#new_game input.player, #new_game input.score {
+	margin-right: 10px;
+}
+
+#ft {
+	border-top: 1px solid #999999;
+	padding-top: 3px;
+	color: #999999;
+	font-size: 11px;
+	text-align: center;
+}

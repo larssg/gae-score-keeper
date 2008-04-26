@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    {% block title %}
+    <title>Score Keeper</title>
+    {% endblock %}
+    <link href="/css/reset.css" type="text/css" rel="Stylesheet" />
+    <link href="/css/typography.css" type="text/css" rel="Stylesheet" />
+    <link href="/css/grid.css" type="text/css" rel="Stylesheet" />
+    <link href="/css/forms.css" type="text/css" rel="Stylesheet" />
+    <link href="/css/screen.css" type="text/css" rel="Stylesheet" />
+    {% block css %}
+    {% endblock %}
+  </head>
+  <body>
+    <div class="container">
+      {% block script %}
+      {% endblock %}
+
+      <div id="hd">
+        <div id="logo">
+          <a href="/">
+            <img src="images/logo.gif" width="241" height="38" alt="Logo">
+          </a>
+        </div>
+        {% block header %}
+        {% endblock %}
+      </div>
+      <div id="bd">
+        {% block maincontent %}
+          <div class="{{mainContentClass}}">
+            {% block content %}
+            {% endblock %}
+          </div>
+        {% endblock %}
+      </div>
+      <div id="ft">
+        {% block footer %}
+          WARNING! This is a test project. Data entered here will be treated as a test. The database will be reset regularly.
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

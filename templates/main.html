@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+  <div id="new_game">
+    <form method='post' action='/'>
+      <label for="player1">Team:</label> <input type="text" name="player1" class="player" />
+      <label for="score1">Score:</label> <input type="text" name="score1" class="score" /><br />
+      <label for="player2">Team:</label> <input type="text" name="player2" class="player" />
+      <label for="score2">Score:</label> <input type="text" name="score2" class="score" />
+      <input type="submit" value="Save game" />
+    </form>
+  </div>
+
+  <div class="list">
+    <table id="recent_matches">
+      <tr>
+        <th>Team 1</th>
+        <th class="scores">Scores</th>
+        <th>Team 2</th>
+        <th>Winner</th>
+      </tr>
+      {% for match in matches %}
+        <tr>
+          <td>{{ match.player1 }}</td>
+          <td class="scores">{{ match.score1 }} - {{ match.score2 }}</td>
+          <td>{{ match.player2 }}</td>
+          <td>{{ match.winner }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock %}
