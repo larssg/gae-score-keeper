@@ -17,5 +17,8 @@ handlers:
 - url: /javascript
   static_dir: static/javascript
 
+- url: /account
+  script: account.py
+
 - url: /.*
-  script: scorekeepr.py
+  script: dashboard.py

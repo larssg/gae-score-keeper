@@ -20,6 +20,15 @@
 
       <div id="hd">
         <div id="logo">
+          <div id="userlinks">
+            {% if logged_in %}
+              Welcome, {{ nickname }}
+              | <a href="/account">Profile</a>
+              | <a href="{{ signout_url }}">Sign out</a>
+            {% else %}
+              <a href="{{ signin_url }}">Sign in or register</a>
+            {% endif %}
+          </div>
           <a href="/">
             <img src="images/logo.gif" width="241" height="38" alt="Logo">
           </a>

@@ -17,3 +17,7 @@ class Match(db.Model):
 			return self.player1
 		else:
 			return self.player2
+			
+class Account(db.Model):
+	email = db.StringProperty(required=True)
+	name = db.StringProperty(required=True)

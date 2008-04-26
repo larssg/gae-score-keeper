@@ -32,6 +32,16 @@ form {
 	margin: 0;
 }
 
+#hd #logo #userlinks {
+	float: right;
+	color: #FFFFFF;
+}
+
+#hd #logo #userlinks a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
 #bd #recent_matches .scores {
 	text-align: center;
 }
